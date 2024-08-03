@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KloneApi.Web", "KloneApi.Web\KloneApi.Web.csproj", "{0BC8FD8E-FBC6-4255-A3F7-EF9BFEE56462}"
+EndProject
+Project("{7A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KloneApi.Identity", "KloneApi.Identity\KloneApi.Identity.csproj", "{1BC8FD8E-FBC6-4255-A3F7-EF9BFEE56462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KloneApi.SharedDomain", "KloneApi.SharedDomain\KloneApi.SharedDomain.csproj", "{4C5F8D59-A81A-479A-8C92-B449600BE1C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BC8FD8E-FBC6-4255-A3F7-EF9BFEE56462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC8FD8E-FBC6-4255-A3F7-EF9BFEE56462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC8FD8E-FBC6-4255-A3F7-EF9BFEE56462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC8FD8E-FBC6-4255-A3F7-EF9BFEE56462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5F8D59-A81A-479A-8C92-B449600BE1C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5F8D59-A81A-479A-8C92-B449600BE1C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5F8D59-A81A-479A-8C92-B449600BE1C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5F8D59-A81A-479A-8C92-B449600BE1C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E65B762-42AB-4DA7-B542-69AC8E3D2141}
+	EndGlobalSection
+EndGlobal
