@@ -39,6 +39,8 @@ public class KloneDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<User>().HasKey(u => u.Id);
+        builder.Entity<User>().HasIndex(u => u.Email).IsUnique();
+        builder.Entity<User>().HasIndex(u => u.Phone).IsUnique();
     }
 
 }

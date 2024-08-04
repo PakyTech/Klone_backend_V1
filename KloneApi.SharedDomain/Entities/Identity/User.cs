@@ -11,4 +11,5 @@ public class User : BaseEntity
     public string Pin { get; set; }
     public string Phone {get;set;}
     public string Email { get; set;}
+    public bool IsAccountVerified {get;set;}
 }
