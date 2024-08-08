@@ -41,6 +41,15 @@ public class OnboardingController: BaseMobileController
         return BadRequest(new ErrorResponse   { ErrorDescription = result.Message!});
     }
 
+    [HttpPost("create-pin")]
+    public async Task<IActionResult> CreatePin([FromBody] CreatePin.Request request,CancellationToken cancellationToken)
+    {
+        var response = await mediator.Send(request,cancellationToken);
+        if(response.IsSuccess) return Ok( new {response.Message});
+
+        return BadRequest(new ErrorResponse {ErrorDescription = response.Message!});
+    }   
+
     [HttpGet("test")]
     public IActionResult Test() =>  Ok(new {message = "we are good to go"});
 

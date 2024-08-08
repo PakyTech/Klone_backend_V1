@@ -22,7 +22,7 @@ public static class SignUp
             RuleFor(x => x.LastName).NotEmpty();
             RuleFor(x => x.Password).NotEmpty();
             RuleFor(x => x.ConfirmPassword).NotEmpty();
-            RuleFor(x => x.Pin).NotEmpty();
+            RuleFor(x => x.Pin).Empty();
             RuleFor(x => x).Must(x => x.Password == x.ConfirmPassword).WithMessage("Password and Confirm Password must be the same.");
         }
     }
