@@ -2,6 +2,7 @@ using KloneApi.Identity.Command;
 using KloneApi.SharedDomain.BaseClasses;
 using KloneApi.SharedDomain.Models;
 using MediatR;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KloneApi.Identity.Controllers;
@@ -14,13 +15,14 @@ public class OnboardingController: BaseMobileController
         
     }
 
-    [HttpPost("code-verification/{code}")]
-    public async Task<IActionResult> VerifyCode(string code)
+    [HttpPost("signup-verification")]
+    public async Task<IActionResult> VerifyCode([FromBody] VerifySignUp.Request code)
     {
-        if(code == "123456")
-            return Ok(new {message = "verification was successful"});
-
-        return BadRequest( new ErrorResponse {ErrorDescription = "verification failed"});
+        var result = await mediator.Send(code);
+        
+        if(result.IsSuccess) return Ok(new {result.Message});
+        
+        return BadRequest( new ErrorResponse {ErrorDescription = result.Message!});
     }
 
 
@@ -38,5 +40,8 @@ public class OnboardingController: BaseMobileController
 
         return BadRequest(new ErrorResponse   { ErrorDescription = result.Message!});
     }
+
+    [HttpGet("test")]
+    public IActionResult Test() =>  Ok(new {message = "we are good to go"});
 
 }

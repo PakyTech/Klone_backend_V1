@@ -13,5 +13,4 @@ public class BaseMobileController : ControllerBase
     {
         this.mediator = mediator;
     }
-    
 }
